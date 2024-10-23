@@ -2,14 +2,14 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-  redirect("/add")
+  redirect("/add/new")
 end
 
 get("/add/new") do
   erb(:add_form)
 end
 
-get("/add/results") do
+get("/add/result") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
@@ -21,7 +21,7 @@ get("/sub/new") do
   erb(:sub_form)
 end
 
-get("/sub/results") do
+get("/sub/result") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
@@ -33,7 +33,7 @@ get("/multiply/new") do
   erb(:mult_form)
 end
 
-get("/multiply/results") do
+get("/multiply/result") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
@@ -45,7 +45,7 @@ get("/divide/new") do
   erb(:div_form)
 end
 
-get("/divide/results") do
+get("/divide/result") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
