@@ -5,7 +5,7 @@ get("/") do
   redirect("/add/new")
 end
 
-get("/add/new") do
+get("/add/form") do
   erb(:add_form)
 end
 
@@ -17,7 +17,7 @@ get("/add/result") do
   erb(:add_result)
 end
 
-get("/sub/new") do
+get("/sub/form") do
   erb(:sub_form)
 end
 
@@ -29,11 +29,11 @@ get("/sub/result") do
   erb(:sub_result)
 end
 
-get("/multiply/new") do
+get("/mult/form") do
   erb(:mult_form)
 end
 
-get("/multiply/result") do
+get("/mult/result") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
@@ -41,11 +41,11 @@ get("/multiply/result") do
   erb(:mult_result)
 end
 
-get("/divide/new") do
+get("/div/form") do
   erb(:div_form)
 end
 
-get("/divide/result") do
+get("/div/result") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
