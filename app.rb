@@ -5,7 +5,7 @@ get("/") do
   redirect("/add/new")
 end
 
-get("/add/form") do
+get("/add") do
   erb(:add_form)
 end
 
@@ -17,7 +17,7 @@ get("/add/result") do
   erb(:add_result)
 end
 
-get("/sub/form") do
+get("/subtract") do
   erb(:sub_form)
 end
 
@@ -29,7 +29,7 @@ get("/sub/result") do
   erb(:sub_result)
 end
 
-get("/mult/form") do
+get("/multiply") do
   erb(:mult_form)
 end
 
@@ -41,7 +41,7 @@ get("/mult/result") do
   erb(:mult_result)
 end
 
-get("/div/form") do
+get("/divide") do
   erb(:div_form)
 end
 
